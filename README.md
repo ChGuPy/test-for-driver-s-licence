@@ -9,8 +9,10 @@ If you going to use it you need:
 2) Add new user so user could sign in on index page
 3) Or just sign in as admin on index page.
 
-If you dont know russian, just leave database, create superuser, add q/a about anything you wish.
+If you not going to use it - just leave it behind. Create superuser, add q/a about everything you want. 
+
+If you dont know russian - in models all verbose names at russian :(
 
 Every time you start test again all previous progress override for same user.
-You can also  change this behavior in templates.
+
 
