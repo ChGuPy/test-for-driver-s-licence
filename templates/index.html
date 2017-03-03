@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en">
+<head>
+    <link href="{% static 'main.css'%}" rel="stylesheet"/>
+    <meta charset="UTF-8">
+    <title>Тест на знания правил ПДД</title>
+</head>
+<body>
+<div id ='enter'>
+    {{ error }}
+<form method="post" action=""   enctype="multipart/form-data">
+<div class="field">
+{{ form.login.errors }}
+<label for="id_login">Логин:</label>
+{{ form.login }}
+</div>
+<div class='field'>
+{{ form.password.errors }}
+<label for="id_password">Пароль:</label>
+{{ form.password}}
+</div>
+    {% csrf_token %}
+<input type="submit" value="Начать тест"/>
+</form>
+    </div>
+<footer>
+    <p>Все вопросы, ответы, а так же фото взяты из <a href="http://gai.eu.com">http://gai.eu.com/</a>.Там Вы сможете найти огромное множество тестов. </p>
+</footer>
+</body>
+</html>

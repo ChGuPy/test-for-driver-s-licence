@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en">
+<head>
+    <link href="{% static 'main.css'%}" rel="stylesheet"/>
+    <meta charset="UTF-8">
+    <title>Тест на знания правил ПДД</title>
+</head>
+<body>
+<h1>Результаты теста</h1>
+{% if right_answers == 0 %}
+        <img src="{% static 'bad.png' %}"/>
+    {% endif %}
+{% if right_answers == amount_of_question %}
+        <img src="{% static 'god.jpg' %}"/>
+    {% endif %}
+<div id="fininfo">
+<p>Вы дали  {{ right_answers }} верных ответов на  {{ amount_of_question   }} вопросов.</p>
+    <a href="/">Начать заново ?</a>
+
+    </div>
+
+</body>
+</html>

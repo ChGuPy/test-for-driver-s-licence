@@ -1,0 +1,47 @@
+body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-align: center;
+    background-color: #8aa7b5;
+}
+
+#enter {
+    text-align: center;
+    margin-top: 10%;
+}
+.field {
+    font-size: large;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    height: auto;
+}
+table input, select{
+    float: right;
+
+}
+table label {
+    margin-top: 30px;
+}
+
+#content {
+    padding: 3px;
+    border-radius: 13px;
+    margin-top: 10%;
+
+}
+#content header h1 {
+    font-size: 1.12rem;
+}
+ul {
+    list-style: none;
+}
+
+input  {
+    margin-top: 10px;
+
+}
+
+footer {
+    margin-top: 30%;
+    height: 100%;
+    font-weight: bold;
+}

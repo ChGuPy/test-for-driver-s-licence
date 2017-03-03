@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en">
+<head>
+    <link href="{% static 'main.css'%}" rel="stylesheet"/>
+    <script src="{% static  'js.js' %}"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <meta charset="UTF-8">
+    <title>Тест на знания правил ПДД</title>
+</head>
+<body>
+<div id="content">
+<div id="main">
+<form name="question" method="POST">
+    <header><h1>{{ form.title }}</h1></header>
+    {% if form.img %}
+        <img src="{{ form.img.url }}" width="200" height="200"/>
+    {% endif %}
+    <ul id="answers">
+        {% if form.answer1 %}
+            <li>
+    <input type="radio" value="{{ form.answer1.pk}}" class="choices" name="choices">{{ form.answer1 }}
+            </li>
+        {% endif %}
+        {% if form.answer2 %}
+             <li>
+    <input type="radio" value="{{ form.answer2.pk }}" class="choices" name="choices">{{ form.answer2 }}
+             </li>
+        {% endif %}
+        {% if form.answer3 %}
+             <li>
+    <input type="radio" value="{{ form.answer3.pk }}" class="choices" name="choices">{{ form.answer3 }}
+             </li>
+        {% endif %}
+        {% if form.answer4 %}
+             <li>
+    <input type="radio" value="{{ form.answer4.pk}}" class="choices" name="choices">{{ form.answer4 }}
+             </li>
+        {% endif %}
+        {% csrf_token %}
+    </ul>
+        <input type="submit" value="Ответить">
+    </div>
+</form>
+</div>
+</div>
+<footer style="margin-top: 15%;" >
+    <p>Все вопросы, ответы, а так же фото взяты из <a href="http://gai.eu.com">http://gai.eu.com/</a>.Там Вы сможете найти огромное множество тестов. </p>
+</footer>
+</body>
+</html>
